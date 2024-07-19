@@ -17,7 +17,7 @@ public class UserDataLibrary {
 		System.out.println();
 		sc.close();
 		
-		 // Create XML string
+		 // Creating XML string
 		String xmlString = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<credentials>\n" +
                 "    <StudentName>" + name + "</StudentName>\n" +
@@ -25,7 +25,7 @@ public class UserDataLibrary {
                 "    <HighestQualification>" + qualification + "</HighestQualification>\n" +
                 "</credentials>";
 
-        // Write XML string to file
+        // Writing XML string to XML file
         try (FileWriter fileWriter = new FileWriter("Student_Details.xml")) {
             fileWriter.write(xmlString);
             System.out.println("User credentials successfully stored in Student_Details.xml");
