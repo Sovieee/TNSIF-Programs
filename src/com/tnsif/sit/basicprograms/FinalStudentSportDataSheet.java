@@ -1,24 +1,30 @@
 package com.tnsif.sit.basicprograms;
-//import java.util.Scanner;
-public class FinalStudentSportDataSheet {
+import java.util.*;
 
-	public static void main(String[] args) 
-	{
-		SportsAcademy obj=new SportsAcademy("72256930H", "Sourav Chakraborty", "ENTC" , 9834569666L, 161.5f, 68.5f, "Medium ");
-		System.out.println("Following are the Details of the Particular : \n"+obj);
-		  String str1 = "NPTEL";
+public class FinalStudentSportDataSheet{
+public static void main(String[] args) {
 
-		    String str2 = "java";
+String choice = "";
+Scanner input = new Scanner(System.in);
+int sum = 0;
+long product = 0;
+double average = 0;
+int count = 0;
 
-		    int a = 20;
+choice = input.nextLine();	
+while (choice != "q")
+{
+  int a = input.nextInt();
+  sum +=a;
+  product *= a;
+  count++;
+  
+}
 
-		    int b = 24;
+average = sum / count;
 
-		    System.out.println(str1 + a + b); // Statement 1
-
-		 
-
-		    System.out.println(a + b + str2); // Statement 2
-	}
-
+System.out.println ("Product is: "+ product);
+System.out.println ("Average is: "+ average);
+input.close();
+}
 }
